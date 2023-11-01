@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01489B93-FF59-4512-84FA-4E61ED2DECCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>mi_primer_proyecto.My.MyApplication</StartupObject>
+    <RootNamespace>mi_primer_proyecto</RootNamespace>
+    <AssemblyName>mi primer proyecto</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>mi primer proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>mi primer proyecto.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>bin\Debug\Mapas\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>bin\Debug\Mapas\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=7.0.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.7.0.2\lib\net462\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="calcula.Designer.vb">
+      <DependentUpon>calcula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="calcula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\cls_usuarios.vb" />
+    <Compile Include="Clases\cls_usuarios_programa.vb" />
+    <Compile Include="Enviar E-Mail\enviar_mail.Designer.vb">
+      <DependentUpon>enviar_mail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enviar E-Mail\enviar_mail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bases de datos\alimentos.Designer.vb">
+      <DependentUpon>alimentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bases de datos\alimentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bases de datos\consulta actualizacion.Designer.vb">
+      <DependentUpon>consulta actualizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bases de datos\consulta actualizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bases de datos\consulta_mundo.Designer.vb">
+      <DependentUpon>consulta_mundo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bases de datos\consulta_mundo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exporta pdf\frm_pdf.Designer.vb">
+      <DependentUpon>frm_pdf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Exporta pdf\frm_pdf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bases de datos\frm_usuarios.Designer.vb">
+      <DependentUpon>frm_usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bases de datos\frm_usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bases de datos\usuario log.Designer.vb">
+      <DependentUpon>usuario log.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bases de datos\usuario log.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visualizador1.Designer.vb">
+      <DependentUpon>visualizador1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="visualizador1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_listview.Designer.vb">
+      <DependentUpon>frm_listview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_listview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lef right y mid.Designer.vb">
+      <DependentUpon>lef right y mid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lef right y mid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="list_view2.Designer.vb">
+      <DependentUpon>list_view2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="list_view2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="select_case.Designer.vb">
+      <DependentUpon>select_case.vb</DependentUpon>
+    </Compile>
+    <Compile Include="select_case.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.vb">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_cuarto.Designer.vb">
+      <DependentUpon>form_cuarto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_cuarto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_primero.Designer.vb">
+      <DependentUpon>form_primero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_primero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_segundo.Designer.vb">
+      <DependentUpon>form_segundo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_segundo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_tercero.Designer.vb">
+      <DependentUpon>form_tercero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_tercero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="for_next.Designer.vb">
+      <DependentUpon>for_next.vb</DependentUpon>
+    </Compile>
+    <Compile Include="for_next.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ejemplo_if.Designer.vb">
+      <DependentUpon>frm_ejemplo_if.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ejemplo_if.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent2.Designer.vb">
+      <DependentUpon>MDIParent2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Numero Aleatorios.Designer.vb">
+      <DependentUpon>Numero Aleatorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Numero Aleatorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validacion de Cedula.Designer.vb">
+      <DependentUpon>Validacion de Cedula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Validacion de Cedula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visualizador.Designer.vb">
+      <DependentUpon>visualizador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="visualizador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="calcula.resx">
+      <DependentUpon>calcula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enviar E-Mail\enviar_mail.resx">
+      <DependentUpon>enviar_mail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bases de datos\alimentos.resx">
+      <DependentUpon>alimentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bases de datos\consulta actualizacion.resx">
+      <DependentUpon>consulta actualizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bases de datos\consulta_mundo.resx">
+      <DependentUpon>consulta_mundo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exporta pdf\frm_pdf.resx">
+      <DependentUpon>frm_pdf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bases de datos\frm_usuarios.resx">
+      <DependentUpon>frm_usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bases de datos\usuario log.resx">
+      <DependentUpon>usuario log.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visualizador.resx">
+      <DependentUpon>visualizador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visualizador1.resx">
+      <DependentUpon>visualizador1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_listview.resx">
+      <DependentUpon>frm_listview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lef right y mid.resx">
+      <DependentUpon>lef right y mid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_view2.resx">
+      <DependentUpon>list_view2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="select_case.resx">
+      <DependentUpon>select_case.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_cuarto.resx">
+      <DependentUpon>form_cuarto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_primero.resx">
+      <DependentUpon>form_primero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_segundo.resx">
+      <DependentUpon>form_segundo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_tercero.resx">
+      <DependentUpon>form_tercero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="for_next.resx">
+      <DependentUpon>for_next.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ejemplo_if.resx">
+      <DependentUpon>frm_ejemplo_if.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent2.resx">
+      <DependentUpon>MDIParent2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numero Aleatorios.resx">
+      <DependentUpon>Numero Aleatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validacion de Cedula.resx">
+      <DependentUpon>Validacion de Cedula.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
